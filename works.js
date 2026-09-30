@@ -105,7 +105,7 @@ window.WORKS = {
     {
       id: "other",
       no: "05",
-      name: "其他 · 插画",
+      name: "其他",
       en: "OTHERS / ILLUSTRATION",
       tag: "插画 · 练习 · 实验",
       desc: "除商业项目外的个人插画、字体与视觉实验。该栏目持续更新中——准备好你的作品图，随时可以加入。",
