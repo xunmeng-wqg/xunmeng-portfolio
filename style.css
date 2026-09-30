@@ -376,3 +376,79 @@ body.paper-cursor a,body.paper-cursor .clickable,body.paper-cursor button,body.p
 .deco-plane::before{content:"";position:absolute;left:0;top:6px;width:26px;height:12px;background:#fff3a3;clip-path:polygon(0 50%,100% 0,78% 50%,100% 100%)}
 .deco-plane::after{content:"";position:absolute;left:20px;top:1px;width:18px;height:6px;background:#ffd6e0;rotate:-14deg}
 .deco-badge{position:absolute;left:88%;top:89%;width:56px;height:56px;border-radius:50%;background:#d3f0cf;display:flex;align-items:center;justify-content:center;font:700 9px/1.5 'Courier New',monospace;color:#3c6b3f;letter-spacing:.1em;rotate:-6deg;box-shadow:0 4px 9px rgba(56,34,14,.2),inset 0 0 0 2px rgba(60,107,63,.3);animation-delay:1.62s}
+
+
+/* ===== 挂墙实物感：钥匙串 / 工作牌 / 明信片 挂绳 + 图钉 + 轻摆 ===== */
+@keyframes hang-swing{0%,100%{rotate:0deg}25%{rotate:1.4deg}75%{rotate:-1.4deg}}
+.key-tag,.home-card,.mail-env{animation:pin-in .6s cubic-bezier(.22,1,.36,1) backwards,hang-swing 5.5s ease-in-out 1.2s infinite}
+.key-tag{animation-delay:.1s,1.2s}
+.home-card{animation-delay:.36s,2.1s}
+.mail-env{animation-delay:.62s,1.7s}
+.key-tag::before,.home-card::before,.mail-env::before{content:"";position:absolute;top:-26px;left:50%;margin-left:-1px;width:2px;height:26px;background:repeating-linear-gradient(180deg,#a08a5f 0 4px,#cbb98f 4px 6px);z-index:0;opacity:.95}
+.key-tag::after,.home-card::after,.mail-env::after{content:"";position:absolute;top:-30px;left:50%;margin-left:-4px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#9cc3e6,#3d6f9e 60%,#2c5377);box-shadow:0 2px 4px rgba(0,0,0,.35);z-index:3}
+/* 钥匙串：圆环 + 两把钥匙，挂在绳上 */
+.keyring{position:relative;width:40px;height:40px;border:5px solid #d9a93f;border-radius:50%;margin:0 auto 3px;box-shadow:inset 0 1px 2px rgba(0,0,0,.2),0 3px 6px rgba(56,34,14,.25);z-index:1}
+.keyring::before{content:"";position:absolute;left:50%;top:44%;width:26px;height:8px;margin-left:-13px;border-radius:3px;background:linear-gradient(180deg,#e8c065,#c9973a);box-shadow:0 2px 4px rgba(0,0,0,.22)}
+.keyring::after{content:"";position:absolute;left:50%;top:44%;width:26px;height:8px;margin-left:-13px;border-radius:3px;background:linear-gradient(180deg,#e8c065,#c9973a);box-shadow:0 2px 4px rgba(0,0,0,.22);rotate:34deg;transform-origin:70% 50%}
+/* 工作牌：证件卡挂绳（细绳带） */
+.home-card::before{background:repeating-linear-gradient(90deg,#8b9a86 0 6px,transparent 6px 10px);height:22px;top:-22px;width:34px;margin-left:-17px;opacity:.85}
+.home-card::after{top:-25px}
+/* 明信片：航空红色虚线挂绳 */
+.mail-env::before{background:repeating-linear-gradient(180deg,#e8422f 0 3px,transparent 3px 5px);height:22px;top:-22px;opacity:.8}
+.mail-env::after{top:-25px}
+
+/* ===== 大屏放大（>=1440px）：洞洞板更占屏、更显眼 ===== */
+@media(min-width:1440px){
+  .home-wrap{grid-template-columns:252px 1fr;gap:32px;max-width:min(1680px,96vw);padding:36px 2.5vw 44px}
+  .board-side{padding:26px 22px}
+  .side-name{font-size:26px}
+  .side-tag{font-size:11px}
+  .side-sub{font-size:11px;margin-top:5px}
+  .legend-title{font-size:10px}
+  .side-legend li{font-size:14px;gap:11px}
+  .side-legend .dot{width:13px;height:13px}
+  .side-footnote{font-size:11px}
+  .side-sign{font-size:18px}
+  .board-panel{min-height:660px;padding:34px 30px 26px}
+  .key-tag{left:5%;top:7%}
+  .tag-board{width:286px;padding:22px 22px 19px}
+  .tag-no{font-size:14px;padding:5px 9px}
+  .tag-en{font-size:12px}
+  .tag-board strong{font-size:36px}
+  .tag-board p{font-size:15px}
+  .acrylic{left:35%;top:8%;width:484px;padding:27px 30px 24px}
+  .acry-no{font-size:14px;padding:5px 9px}
+  .acry-en{font-size:13px}
+  .acry-zh{font-size:32px}
+  .acry-desc{font-size:13px}
+  .acry-list{gap:8px}
+  .acry-list li{font-size:16px;padding:7px 11px}
+  .acry-go{font-size:14px}
+  .home-card{right:5%;top:7%;width:232px;padding:20px 17px 17px}
+  .card-avatar{width:150px;height:150px;border-width:5px;margin-bottom:13px}
+  .card-name{font-size:27px}
+  .card-role{font-size:11px}
+  .card-cv{font-size:14px;padding:7px 18px}
+  .skill-tags{left:6%;top:54%;width:282px;padding:18px 19px 16px}
+  .skills{gap:9px;margin-top:12px}
+  .skills i{font-size:14px;padding:6px 12px}
+  .mail-env{right:6%;top:48%;width:286px;padding:19px 19px 16px}
+  .env-mail{font-size:14px}
+  .env-loc{font-size:12px}
+  .env-stamp{width:40px;height:40px;font-size:20px}
+  .qr-card{left:38%;bottom:9%;width:132px;padding:11px}
+  .qr-cap{font-size:9px}
+  .exp-timeline{right:6%;bottom:13%;width:292px;padding:17px 19px 15px}
+  .exp-tl-name{font-size:25px}
+  .exp-tl-sub{font-size:12px}
+  .exp-tl-go{font-size:13px}
+  .st-1{left:58%;bottom:13%}
+  .st-2{right:3.5%;bottom:9%}
+  .sticker{font-size:15px;padding:6px 14px}
+  .deco-note{font-size:13px;padding:10px 13px}
+  .deco-keys{width:88px;height:54px}
+  .deco-photo{width:70px;height:88px}
+  .deco-pencil{height:100px}
+  .deco-plane{width:46px;height:30px}
+  .deco-badge{width:66px;height:66px;font-size:11px}
+}
