@@ -11,7 +11,6 @@ window.WORKS = {
       tag: "神守人间 · MORTAL GUARDIANS",
       desc: "国潮门神 IP：以河南门神谱系为文化母体，将穆桂英、钟馗、秦良玉、神荼四位经典门神与猫科动物融合，从传统年画提取发饰、服饰纹样与武器特征，用现代扁平插画重新演绎，延展至海报、钥匙扣、抱枕、滑板与户外展示。",
       images: [
-        ["works/ip/p04.webp", "IP 设计 · 章节封面"],
         ["works/ip/p05.webp", "神守人间 · 主视觉"],
         ["works/ip/p06.webp", "项目背景与产品定位"],
         ["works/ip/p07.webp", "角色设计 · 元素提取"],
@@ -39,7 +38,6 @@ window.WORKS = {
       tag: "借过 · BORROW",
       desc: "「借过 BORROW」都市青年精酿酒馆品牌视觉：以酒杯、霓虹与深夜故事为载体，建立强记忆点品牌标识，用黑底、玫红主色与颗粒质感统一海报、菜单、杯垫、会员卡、购物袋等全套物料，输出「借一点快乐」的品牌情绪。",
       images: [
-        ["works/brand/p22.webp", "品牌设计 · 章节封面"],
         ["works/brand/p23.webp", "品牌海报 · 借过 BORROW"],
         ["works/brand/p24.webp", "项目介绍 · 背景与目标"],
         ["works/brand/p25.webp", "品牌理念 · 情绪缓冲带"],
@@ -63,7 +61,6 @@ window.WORKS = {
       tag: "Paw Bites · 爪爪零食",
       desc: "「Paw Bites」快乐系宠物零食品牌 VI：基于宠物经济市场调研，建立以斑点狗 IP 为核心的完整视觉识别系统，覆盖 Logo 规范、色彩规范、产品包装、门店设计、周边物料与电商宣传，传递「快乐摇尾每一天」的品牌温度。",
       images: [
-        ["works/vi/p36.webp", "VI 设计 · 章节封面"],
         ["works/vi/p37.webp", "品牌海报 · Paw Bites"],
         ["works/vi/p38.webp", "品牌背景与理念"],
         ["works/vi/p39.webp", "市场数据分析"],
@@ -91,7 +88,6 @@ window.WORKS = {
       tag: "LAVAS · 香薰蜡烛",
       desc: "「LAVAS」自然疗愈系香薰蜡烛电商设计：取意王维《鹿柴》的东方静谧，从产品宣传、品牌故事、香调金字塔到蜡液工艺、使用建议与陶瓷容器，完成从内容到转化的电商视觉体系，传递「在木的深处，找到情绪的原点」。",
       images: [
-        ["works/ecom/p54.webp", "电商设计 · 章节封面"],
         ["works/ecom/p55.webp", "产品宣传 · 冷杉森林"],
         ["works/ecom/p56.webp", "品牌故事 · 鹿柴意境"],
         ["works/ecom/p57.webp", "香调金字塔"],
