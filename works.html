@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>作品 · 寻梦视觉设计作品集</title>
+<link rel="stylesheet" href="style.css?v=9">
+</head>
+<body class="board-page">
+<nav class="site-nav">
+  <a class="site-logo" href="index.html">EXPLORE WITH JOY</a>
+  <div class="site-links">
+    <a href="index.html">HOME</a>
+    <a href="works.html" class="on">WORKS</a>
+    <a href="experience.html">EXPERIENCE</a>
+    <a href="about.html">ABOUT</a>
+  </div>
+</nav>
+
+<!-- 洞洞板小装饰 -->
+<div class="board-deco note-yellow">点分类便签，看我的作品 ✦</div>
+<div class="board-deco pin-paper"></div>
+<div class="board-deco photo-snap"></div>
+
+<main class="page-main">
+  <div class="tape-title">
+    <span class="tape tape-l"></span><span class="tape tape-r"></span>
+    <h1 class="page-title">作品集 <span class="t-slash">/</span> <span class="t-en">WORKS</span></h1>
+  </div>
+  <div class="eyebrow page-eyebrow"><span>XUN MENG · PORTFOLIO 2026</span><span>PINNED ON MY PUNCH BOARD</span></div>
+
+  <nav class="cat-tabs" id="catTabs"></nav>
+  <div class="cat-desc" id="catDesc"></div>
+  <section class="gallery" id="gallery"></section>
+</main>
+
+<footer class="page-foot">
+  <span>© 2026 寻梦 · XUN MENG</span>
+  <span>视觉设计作品集</span>
+  <span><a href="index.html">EXPLORE WITH JOY</a> · <a href="about.html">关于我</a></span>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" aria-label="关闭">×</button>
+  <button class="lb-prev" id="lbPrev" aria-label="上一张">‹</button>
+  <button class="lb-next" id="lbNext" aria-label="下一张">›</button>
+  <figure class="lb-figure">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+</div>
+
+<script src="works.js?v=2"></script>
+<script>
+(function () {
+  var CATS = window.WORKS.categories;
+  var tabsEl = document.getElementById("catTabs");
+  var descEl = document.getElementById("catDesc");
+  var galEl = document.getElementById("gallery");
+  var current = CATS[0].id;
+
+  /* ---------- 分类便签 ---------- */
+  CATS.forEach(function (c, i) {
+    var b = document.createElement("button");
+    b.className = "cat-tab sticky-n" + (i + 1);
+    b.innerHTML = '<span class="cat-no">' + c.no + '</span>' + c.name;
+    b.title = c.en;
+    b.addEventListener("click", function () { select(c.id); });
+    tabsEl.appendChild(b);
+  });
+
+  function select(id) {
+    current = id;
+    Array.prototype.forEach.call(tabsEl.children, function (b, i) {
+      b.classList.toggle("on", CATS[i].id === id);
+    });
+    render();
+  }
+
+  /* ---------- 渲染照片墙 ---------- */
+  function render() {
+    var c = null;
+    for (var i = 0; i < CATS.length; i++) if (CATS[i].id === current) c = CATS[i];
+    if (!c) return;
+
+    descEl.innerHTML =
+      '<span class="cat-tag">' + c.name + ' · ' + c.en + (c.tag ? '　「' + c.tag + '」' : '') + '</span>' + c.desc;
+
+    galEl.innerHTML = "";
+    if (!c.images.length) {
+      galEl.innerHTML = '<div class="gallery-empty">这个分类还在整理中，插画作品马上就来 ✦</div>';
+      return;
+    }
+    c.images.forEach(function (item, i) {
+      var f = document.createElement("figure");
+      f.className = "work-card " + (i % 2 ? "tilt-r" : "tilt-l");
+      f.style.setProperty("--d", (i * 40) + "ms");
+      f.innerHTML =
+        '<span class="thumb"><img src="' + item[0] + '" alt="' + item[1] + '" loading="lazy"></span>' +
+        '<figcaption><span class="w-no">' + String(i + 1).padStart(2, "0") + '</span>' + item[1] + '</figcaption>';
+      f.addEventListener("click", function () { openLightbox(c.images, i); });
+      galEl.appendChild(f);
+    });
+  }
+
+  /* ---------- 灯箱 ---------- */
+  var lb = document.getElementById("lightbox");
+  var lbImg = document.getElementById("lbImg");
+  var lbCap = document.getElementById("lbCap");
+  var list = [], pos = 0;
+
+  function openLightbox(imgs, i) {
+    list = imgs; pos = i; show(); lb.hidden = false;
+    document.body.classList.add("lb-open");
+  }
+  function closeLightbox() { lb.hidden = true; document.body.classList.remove("lb-open"); }
+  function show() {
+    var item = list[pos];
+    lbImg.src = item[0]; lbImg.alt = item[1];
+    lbCap.textContent = (pos + 1) + " / " + list.length + "　" + item[1];
+  }
+  function step(d) { pos = (pos + d + list.length) % list.length; show(); }
+
+  document.getElementById("lbClose").addEventListener("click", closeLightbox);
+  document.getElementById("lbPrev").addEventListener("click", function () { step(-1); });
+  document.getElementById("lbNext").addEventListener("click", function () { step(1); });
+  lb.addEventListener("click", function (e) { if (e.target === lb) closeLightbox(); });
+  document.addEventListener("keydown", function (e) {
+    if (lb.hidden) return;
+    if (e.key === "Escape") closeLightbox();
+    if (e.key === "ArrowLeft") step(-1);
+    if (e.key === "ArrowRight") step(1);
+  });
+
+  select(CATS[0].id);
+})();
+</script>
+<script src="assets/site.js"></script>
+</body>
+</html>
