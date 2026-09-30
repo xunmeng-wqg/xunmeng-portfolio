@@ -490,18 +490,3 @@ body.paper-cursor a,body.paper-cursor .clickable,body.paper-cursor button,body.p
   --acc:#e8422f; --accd:#b02313; --accl:#ff9b87;
   --ink:#3a2c1a; --ink2:#4a3620; --ink3:#6b5638;
 }
-
-/* ========== 洞洞板真实质感：真实桦木洞洞板材质背景 ========== */
-body.board-page{
-  background-color:var(--board,#c9a97c);
-  color:var(--ink2,#4a3620);
-  background-image:
-    url("assets/board.webp"),
-    linear-gradient(180deg, var(--tint,rgba(201,169,124,.30)), var(--tint,rgba(201,169,124,.30))),
-    radial-gradient(130% 110% at 16% 0%, rgba(255,255,255,.26), transparent 52%),
-    radial-gradient(120% 110% at 100% 100%, rgba(25,12,4,.30), transparent 60%);
-  background-size:cover,cover,cover,cover;
-  background-position:center,0 0,0 0,0 0;
-  background-attachment:fixed,fixed,fixed,fixed;
-  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
-}
