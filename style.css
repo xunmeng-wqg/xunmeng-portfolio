@@ -239,8 +239,8 @@ body.ocean-page{background:#06203a;color:#e8f4ff;min-height:100svh;overflow-x:hi
 
 .board-panel{position:relative;border-radius:10px;padding:28px 26px 22px;min-height:560px;
   background:
-    radial-gradient(circle at 50% 50%, rgba(28,14,5,.9) 1.5px, rgba(28,14,5,.3) 2.2px, transparent 3px),
-    radial-gradient(circle at 50% 50%, rgba(28,14,5,.9) 1.5px, rgba(28,14,5,.3) 2.2px, transparent 3px),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.9) 1.5px, rgba(255,255,255,.28) 2.2px, transparent 3px),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,.9) 1.5px, rgba(255,255,255,.28) 2.2px, transparent 3px),
     repeating-linear-gradient(0deg, rgba(0,0,0,.03) 0 2px, transparent 2px 52px),
     linear-gradient(98deg, #f5ebd8 0%, #ece1c7 38%, #f2e8d4 62%, #e4d8bb 100%),
     linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.22) 18%, transparent 45%),
@@ -490,4 +490,32 @@ body.paper-cursor a,body.paper-cursor .clickable,body.paper-cursor button,body.p
   --board:#c9a97c; --navbg:rgba(193,157,113,.86); --inkrgb:74,54,32;
   --acc:#e8422f; --accd:#b02313; --accl:#ff9b87;
   --ink:#3a2c1a; --ink2:#4a3620; --ink3:#6b5638;
+}
+
+
+/* ===== About 页：可层叠便签墙 + 钥匙扣 / 明信片装饰 ===== */
+.about-board{position:relative}
+.about-notes{position:relative;display:block;width:100%;height:620px}
+.about-notes .note,.about-notes .business-card{position:absolute;margin:0;cursor:pointer}
+.about-notes .note.s1{left:2%;top:2%}
+.about-notes .note.s2{left:36%;top:1%}
+.about-notes .note.s3{left:64%;top:4%}
+.about-notes .note.s4{left:10%;top:15%}
+.about-notes .note.s5{left:58%;top:15%}
+.about-notes .note.n1{left:44%;top:28%;width:120px}
+.about-notes .business-card{left:46%;top:46%}
+.about-notes .note.n2{left:4%;top:48%;max-width:170px}
+.about-notes .note.n3{left:26%;top:72%;max-width:250px}
+/* 明信片 */
+.deco-postcard{position:absolute;left:8%;top:74%;width:116px;height:80px;background:#fdfaf0;padding:5px;border-radius:2px;box-shadow:0 7px 14px rgba(56,34,14,.28);rotate:-5deg;z-index:1}
+.deco-postcard img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.deco-postcard .dp-pin{position:absolute;top:-7px;left:50%;margin-left:-4px;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--accl,#ffb39b),var(--acc,#e8422f) 60%,var(--accd,#b02313));box-shadow:0 2px 3px rgba(0,0,0,.3)}
+/* 关于页钥匙串位置 */
+.about-notes .deco-keys{left:70%;top:2%}
+@media(max-width:900px){
+  .about-notes{height:680px}
+  .about-notes .business-card{left:24%;top:44%}
+  .about-notes .note.n2{left:4%;top:46%}
+  .about-notes .note.n3{left:16%;top:70%}
+  .deco-postcard{left:6%;top:72%}
 }
