@@ -350,11 +350,11 @@ body.paper-cursor a,body.paper-cursor .clickable,body.paper-cursor button,body.p
 .exp-note a{color:var(--accd,#b02313);text-decoration:none;border-bottom:1.5px dashed var(--accd,#b02313)}
 
 /* ===== 首页第 6 张卡片 · 经历时间线便签 ===== */
-.exp-timeline{right:6%;bottom:12%;width:238px;background:#d3f0cf;border-radius:4px;box-shadow:0 8px 16px rgba(56,34,14,.24);padding:14px 16px 13px;animation-delay:.7s;--r:.8deg;--dx:30px;--dy:42px}
-.exp-timeline .tag-no{background:rgba(88,161,92,.18);color:#3c6b3f}
-.exp-timeline .tag-en{color:#3c6b3f}
-.exp-tl-name{display:block;font:700 21px/1.3 楷体,KaiTi,STKaiti;color:#2f4a32;letter-spacing:.08em;margin:2px 0 5px}
-.exp-tl-sub{display:block;margin:0 0 9px;font:10px/1.7 'Courier New',monospace;color:#55805a;letter-spacing:.08em}
+.exp-timeline{right:6%;bottom:12%;width:238px;background:#f7d6e2;border-radius:4px;box-shadow:0 8px 16px rgba(56,34,14,.24);padding:14px 16px 13px;animation-delay:.7s;--r:.8deg;--dx:30px;--dy:42px}
+.exp-timeline .tag-no{background:rgba(168,74,106,.16);color:#a84a6a}
+.exp-timeline .tag-en{color:#a84a6a}
+.exp-tl-name{display:block;font:700 21px/1.3 楷体,KaiTi,STKaiti;color:#8a3a55;letter-spacing:.08em;margin:2px 0 5px}
+.exp-tl-sub{display:block;margin:0 0 9px;font:10px/1.7 'Courier New',monospace;color:#b26a85;letter-spacing:.08em}
 .exp-tl-go{display:inline-block;font:700 11px/1.6 楷体,KaiTi,STKaiti;color:var(--accd,#b02313);border-bottom:1.5px dashed var(--accd,#b02313)}
 
 /* ===== 洞洞板装饰组（纯装饰，不参与点击） ===== */
