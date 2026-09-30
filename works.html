@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>作品 · 寻梦视觉设计作品集</title>
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=11">
 </head>
 <body class="board-page">
 <nav class="site-nav">
@@ -48,6 +48,13 @@
     <img id="lbImg" alt="">
     <figcaption id="lbCap"></figcaption>
   </figure>
+  <aside class="lb-info">
+    <span class="lb-cat" id="lbCat"></span>
+    <h3 class="lb-proj" id="lbProj"></h3>
+    <p class="lb-desc" id="lbDesc"></p>
+    <span class="lb-title" id="lbTitle"></span>
+    <a class="lb-close2" href="#" id="lbClose2">关闭 ×</a>
+  </aside>
 </div>
 
 <script src="works.js?v=2"></script>
@@ -98,30 +105,39 @@
       f.innerHTML =
         '<span class="thumb"><img src="' + item[0] + '" alt="' + item[1] + '" loading="lazy"></span>' +
         '<figcaption><span class="w-no">' + String(i + 1).padStart(2, "0") + '</span>' + item[1] + '</figcaption>';
-      f.addEventListener("click", function () { openLightbox(c.images, i); });
+      f.addEventListener("click", function () { openLightbox(c, i); });
       galEl.appendChild(f);
     });
   }
 
-  /* ---------- 灯箱 ---------- */
+  /* ---------- 灯箱（项目详情面板） ---------- */
   var lb = document.getElementById("lightbox");
   var lbImg = document.getElementById("lbImg");
   var lbCap = document.getElementById("lbCap");
-  var list = [], pos = 0;
+  var lbCat = document.getElementById("lbCat");
+  var lbProj = document.getElementById("lbProj");
+  var lbDesc = document.getElementById("lbDesc");
+  var lbTitle = document.getElementById("lbTitle");
+  var list = [], pos = 0, curCat = null;
 
-  function openLightbox(imgs, i) {
-    list = imgs; pos = i; show(); lb.hidden = false;
+  function openLightbox(cat, i) {
+    curCat = cat; list = cat.images; pos = i; show(); lb.hidden = false;
     document.body.classList.add("lb-open");
   }
   function closeLightbox() { lb.hidden = true; document.body.classList.remove("lb-open"); }
   function show() {
     var item = list[pos];
     lbImg.src = item[0]; lbImg.alt = item[1];
-    lbCap.textContent = (pos + 1) + " / " + list.length + "　" + item[1];
+    lbCap.textContent = (pos + 1) + " / " + list.length;
+    lbCat.textContent = (curCat ? curCat.no + "　" + curCat.name : "") + (curCat && curCat.en ? " · " + curCat.en : "");
+    lbProj.textContent = (curCat && curCat.tag) ? curCat.tag : "";
+    lbDesc.textContent = (item.length > 2 && item[2]) ? item[2] : (curCat ? curCat.desc : "");
+    lbTitle.textContent = (pos + 1) + " / " + list.length + "　" + item[1];
   }
   function step(d) { pos = (pos + d + list.length) % list.length; show(); }
 
   document.getElementById("lbClose").addEventListener("click", closeLightbox);
+  document.getElementById("lbClose2").addEventListener("click", function (e) { e.preventDefault(); closeLightbox(); });
   document.getElementById("lbPrev").addEventListener("click", function () { step(-1); });
   document.getElementById("lbNext").addEventListener("click", function () { step(1); });
   lb.addEventListener("click", function (e) { if (e.target === lb) closeLightbox(); });
@@ -135,6 +151,6 @@
   select(CATS[0].id);
 })();
 </script>
-<script src="assets/site.js"></script>
+<script src="assets/site.js?v=2"></script>
 </body>
 </html>
