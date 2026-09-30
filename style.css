@@ -473,47 +473,24 @@ body.paper-cursor a,body.paper-cursor .clickable,body.paper-cursor button,body.p
 .about-notes .note.n3 small{display:block;font-size:11px;line-height:1.85;color:#55805a;margin-top:6px}
 
 
-/* ===== 季节主题切换 ===== */
+/* ===== 洞洞板基础色（固定真实木色） ===== */
 :root{
   --board:#c9a97c; --navbg:rgba(193,157,113,.86); --inkrgb:74,54,32;
   --acc:#e8422f; --accd:#b02313; --accl:#ff9b87;
   --ink:#3a2c1a; --ink2:#4a3620; --ink3:#6b5638;
-  --season-glow:radial-gradient(48% 42% at 82% 12%, rgba(255,210,140,.28), transparent 70%);
 }
-body[data-season="spring"]{
-  --board:#b9d6a2; --navbg:rgba(185,214,162,.88); --inkrgb:56,84,52;
-  --acc:#4a8f4e; --accd:#2f6b35; --accl:#a5d8a0;
-  --ink:#27412b; --ink2:#3c5a41; --ink3:#72836b;
-  --season-glow:radial-gradient(48% 42% at 82% 12%, rgba(255,214,224,.5), transparent 70%);
+
+/* ========== 洞洞板真实质感：真实桦木洞洞板材质背景 ========== */
+body.board-page{
+  background-color:var(--board,#c9a97c);
+  color:var(--ink2,#4a3620);
+  background-image:
+    url("assets/board.webp"),
+    linear-gradient(180deg, var(--tint,rgba(201,169,124,.30)), var(--tint,rgba(201,169,124,.30))),
+    radial-gradient(130% 110% at 16% 0%, rgba(255,255,255,.26), transparent 52%),
+    radial-gradient(120% 110% at 100% 100%, rgba(25,12,4,.30), transparent 60%);
+  background-size:cover,cover,cover,cover;
+  background-position:center,0 0,0 0,0 0;
+  background-attachment:fixed,fixed,fixed,fixed;
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
 }
-body[data-season="summer"]{
-  --board:#a9c8de; --navbg:rgba(169,200,222,.88); --inkrgb:46,78,102;
-  --acc:#2f7fb5; --accd:#1f5f8f; --accl:#a3d6f0;
-  --ink:#243b4f; --ink2:#3a556b; --ink3:#6f8799;
-  --season-glow:radial-gradient(48% 42% at 82% 12%, rgba(255,236,160,.55), transparent 70%);
-}
-body[data-season="autumn"]{
-  --board:#e0b184; --navbg:rgba(224,177,132,.88); --inkrgb:110,70,38;
-  --acc:#d9772f; --accd:#a8541c; --accl:#f5b27e;
-  --ink:#4a2f17; --ink2:#68462a; --ink3:#95745a;
-  --season-glow:radial-gradient(48% 42% at 82% 12%, rgba(255,190,110,.5), transparent 70%);
-}
-body[data-season="winter"]{
-  --board:#c3d6ea; --navbg:rgba(195,214,234,.9); --inkrgb:64,86,118;
-  --acc:#5f8fc9; --accd:#3f6aa4; --accl:#c4dcf4;
-  --ink:#2c3e5c; --ink2:#43587a; --ink3:#7c90b0;
-  --season-glow:radial-gradient(48% 42% at 82% 12%, rgba(255,255,255,.55), transparent 70%);
-}
-body[data-season]::before{content:"";position:fixed;inset:0;background:var(--season-glow);pointer-events:none;z-index:0}
-body[data-season] .site-nav,body[data-season] .page-main,body[data-season] .page-foot,body[data-season] main{position:relative;z-index:1}
-/* 季节切换按钮 */
-.season-btn{position:fixed;top:74px;right:18px;z-index:120;display:flex;align-items:center;gap:6px;padding:8px 13px;border-radius:999px;background:rgba(255,250,235,.92);border:1px solid rgba(74,54,32,.35);color:var(--ink2);font:700 12px/1 楷体,KaiTi,STKaiti;cursor:pointer;box-shadow:0 3px 9px rgba(56,34,14,.22);letter-spacing:.06em}
-.season-btn:hover{border-color:var(--acc);color:var(--acc)}
-.season-dot{width:11px;height:11px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 2px rgba(255,255,255,.7)}
-.season-menu{position:fixed;top:118px;right:18px;z-index:120;display:none;flex-direction:column;gap:2px;background:rgba(255,250,235,.97);border:1px solid rgba(74,54,32,.3);border-radius:12px;padding:7px;box-shadow:0 8px 22px rgba(56,34,14,.28)}
-.season-menu.open{display:flex}
-.season-opt{display:flex;align-items:center;gap:8px;padding:8px 12px;border:0;background:transparent;border-radius:8px;cursor:pointer;font:700 13px/1 楷体,KaiTi,STKaiti;color:var(--ink2);text-align:left}
-.season-opt:hover{background:rgba(0,0,0,.06)}
-.season-opt.on{background:rgba(0,0,0,.08)}
-.season-opt .sd{width:12px;height:12px;border-radius:50%;border:1px solid rgba(74,54,32,.3)}
-@media(max-width:700px){.season-btn{top:62px;right:12px;padding:7px 10px}.season-menu{top:104px;right:12px}}
