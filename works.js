@@ -111,7 +111,7 @@ window.WORKS = {
         ["works/other/p65.webp", "雪夜星星 · 角色插画"],
         ["works/other/p66.webp", "花伞少女 · 角色插画"],
         ["works/other/p67.webp", "冬至 · 线稿练习"],
-        ["works/other/p68.webp", "冬至森林 · 场景插画"]
+        ["works/other/p68.webp", "神秘精灵森林"]
       ]
     }
   ]
