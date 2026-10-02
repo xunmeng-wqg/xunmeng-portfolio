@@ -40,7 +40,7 @@ body{color:#17201e;background:#e8ece8}body::before{background:rgba(255,255,255,.
 .site-links a{font:10px/1 Arial,sans-serif;letter-spacing:.22em;color:#5a6a60;text-decoration:none;padding-bottom:3px;border-bottom:1px solid transparent}
 .site-links a:hover{color:#23352d}
 .site-links a.on{color:#17201e;border-bottom-color:#d8f36a}
-.page-main{width:100%;margin:0 auto;padding:48px 2.5vw 40px;max-width:1780px}
+.page-main{width:100%;margin:0 auto;padding:64px 3.5vw 40px;max-width:1500px}
 .page-eyebrow{margin-bottom:26px}
 .page-title{font-size:clamp(38px,6.5vw,84px);letter-spacing:-.05em;line-height:1.05;color:#17201e;margin:0 0 8px}
 .title-slash{color:#7a8a7d;font-weight:400;margin:0 .18em}
@@ -265,8 +265,8 @@ body.ocean-page{background:#06203a;color:#e8f4ff;min-height:100svh;overflow-x:hi
 @media(max-width:700px){.sea-main{padding:26px 5vw 8px}.sea-title{font-size:11vw}.sea-sub{letter-spacing:.16em;font-size:8px}.sea-hint{font-size:12px}.sea-fish img{height:calc(var(--h,150px)*0.72)}.bubble{width:82px;height:82px}.bubble::after{display:none}}
 
 /* ========== v5 首页：洞洞板工作台欢迎页 ========== */
-.home-wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr;max-width:1680px;margin:0 auto;padding:30px 3vw 36px;align-items:start}
-.board-side{display:none!important}
+.home-wrap{position:relative;z-index:2;display:grid;grid-template-columns:210px 1fr;gap:26px;max-width:1240px;margin:0 auto;padding:30px 3.5vw 36px;align-items:start}
+.board-side{position:sticky;top:86px;background:rgba(253,250,240,.9);border-radius:6px;box-shadow:0 10px 22px rgba(56,34,14,.22);padding:22px 18px;border:1px solid rgba(74,54,32,.16)}
 .side-brand{display:flex;flex-direction:column;gap:5px;padding-bottom:16px;border-bottom:1px dashed #cbb98f}
 .side-name{font:700 22px/1.1 楷体,KaiTi,STKaiti;color:#2f2413;letter-spacing:.1em}
 .side-tag{font:700 10px/1.5 'Courier New',monospace;color:var(--accd,#b02313);letter-spacing:.18em}
@@ -456,7 +456,7 @@ body.paper-cursor a,body.paper-cursor .clickable,body.paper-cursor button,body.p
 
 /* ===== 大屏放大（>=1440px）：洞洞板更占屏、更显眼 ===== */
 @media(min-width:1440px){
-  .home-wrap{grid-template-columns:1fr;max-width:min(1780px,97vw);padding:30px 2vw 44px}
+  .home-wrap{grid-template-columns:252px 1fr;gap:32px;max-width:min(1680px,96vw);padding:36px 2.5vw 44px}
   .board-side{padding:26px 22px}
   .side-name{font-size:26px}
   .side-tag{font-size:11px}
