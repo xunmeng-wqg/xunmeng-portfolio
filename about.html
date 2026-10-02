@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>关于 · 寻梦视觉设计作品集</title>
-<link rel="stylesheet" href="style.css?v=28">
+<link rel="stylesheet" href="style.css?v=29">
 </head>
 <body class="board-page">
 <nav class="site-nav">
@@ -27,7 +27,16 @@
     <span class="tape tape-l"></span><span class="tape tape-r"></span>
   </div>
 
-  <div class="about-board">
+  <div class="about-board" id="aboutBoard">
+    <div class="big-env" id="bigEnv" onclick="document.getElementById('aboutBoard').classList.add('open')">
+      <div class="big-flap"></div>
+      <div class="big-body">
+        <div class="big-to">寻梦的作品集 ✦</div>
+        <div class="big-sub">PUNCH BOARD · OPEN TO EXPLORE</div>
+        <div class="big-hint">✦ 点我拆开 ✦</div>
+      </div>
+      <div class="big-seal"></div>
+    </div>
     <!-- 证件卡 -->
     <div class="id-card" id="idCard">
       <!-- 信封封面（点击拆开） -->
