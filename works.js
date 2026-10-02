@@ -104,8 +104,15 @@ window.WORKS = {
       name: "其他",
       en: "OTHERS / ILLUSTRATION",
       tag: "插画 · 练习 · 实验",
-      desc: "除商业项目外的个人插画、字体与视觉实验。该栏目持续更新中——准备好你的作品图，随时可以加入。",
-      images: []
+      desc: "个人插画与角色设计练习：以软萌 Q 版少女为主角，融合星星、蝴蝶、花伞与冬日森林等意象，探索手绘感与治愈系色彩的表达。",
+      images: [
+        ["works/other/p63.webp", "星星月亮少女 · 角色插画"],
+        ["works/other/p64.webp", "蝴蝶与少女 · 角色插画"],
+        ["works/other/p65.webp", "雪夜星星 · 角色插画"],
+        ["works/other/p66.webp", "花伞少女 · 角色插画"],
+        ["works/other/p67.webp", "冬至 · 线稿练习"],
+        ["works/other/p68.webp", "冬至森林 · 场景插画"]
+      ]
     }
   ]
 };
