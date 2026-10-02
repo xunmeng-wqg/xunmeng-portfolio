@@ -189,9 +189,9 @@ body.board-page{background-color:var(--board,#c9a97c);color:var(--ink2,#4a3620);
 .env-hint{display:block;margin-top:18px;font:700 13px/1.6 楷体,KaiTi,STKaiti;color:#e8422f;letter-spacing:.2em;animation:envPulse 2s ease-in-out infinite}
 @keyframes envPulse{0%,100%{opacity:.6}50%{opacity:1}}
 .env-seal{position:absolute;bottom:-14px;left:50%;margin-left:-16px;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffb39b,#e8422f 60%,#b02313);box-shadow:0 3px 8px rgba(180,30,19,.4);z-index:4}
-.letter{opacity:0;transform:translateY(30px);transition:opacity .5s ease .3s, transform .6s cubic-bezier(.22,1,.36,1) .3s;pointer-events:none}
+.paper{opacity:0;transform:translateY(30px);transition:opacity .5s ease .3s, transform .6s cubic-bezier(.22,1,.36,1) .3s;pointer-events:none}
 #id-card.open .env{opacity:0;transform:translateY(-110%) rotate(-4deg);visibility:hidden}
-#id-card.open .letter{opacity:1;transform:translateY(0);pointer-events:auto}
+#id-card.open .paper{opacity:1;transform:translateY(0);pointer-events:auto}
 .id-card{position:relative;background:#fdfaf0;border-radius:6px;box-shadow:0 14px 30px rgba(56,34,14,.3),0 3px 6px rgba(0,0,0,.16);padding:36px 36px 30px;rotate:-.8deg;animation:pin-in .6s cubic-bezier(.22,1,.36,1) both}
 .id-card::before{content:"";position:absolute;top:-10px;left:50%;margin-left:-8px;width:17px;height:17px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--accl,#ff9b87),var(--acc,#e8422f) 55%,var(--accd,#b02313));box-shadow:0 3px 7px rgba(0,0,0,.38);z-index:2}
 .id-avatar{display:block;position:relative;width:150px;height:150px;margin:0 auto 24px;text-decoration:none;border-radius:50%;animation:pin-in .6s cubic-bezier(.22,1,.36,1) both}
