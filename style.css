@@ -53,6 +53,19 @@ body{color:#17201e;background:#e8ece8}body::before{background:rgba(255,255,255,.
 .cat-en{font:8px/1 Arial,sans-serif;letter-spacing:.18em;color:#7a8a7d}
 .cat-tab.on .cat-en{color:#a9bba8}
 .gallery-wrap{min-height:40vh}
+.works-intro{
+  max-width:720px;
+  margin:0 auto 28px;
+  padding:18px 22px;
+  background:rgba(253,250,240,.85);
+  border-left:3px solid var(--acc,#e8422f);
+  border-radius:3px;
+  font-size:14.5px;
+  line-height:1.9;
+  color:#5a4a35;
+  box-shadow:0 4px 12px rgba(56,34,14,.12);
+  rotate:-0.4deg;
+}
 .cat-desc{font-size:14px;line-height:1.95;color:#43534d;max-width:920px;margin:0 0 30px}
 .cat-tag{display:block;font:700 12px/1.5 Arial,sans-serif;letter-spacing:.18em;color:#17201e;margin-bottom:10px}
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
