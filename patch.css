@@ -3,3 +3,9 @@
 .board-side{display:none!important}
 .home-wrap{grid-template-columns:1fr!important;max-width:1680px!important;padding:30px 2.5vw 36px!important}
 .page-main{max-width:1780px!important;padding:48px 2.5vw 40px!important}
+
+/* 拉高洞洞板，垂直方向更舒展 */
+.exp-panel{min-height:900px!important;padding:50px 50px 60px!important}
+.home-wrap{padding-bottom:80px!important}
+.page-main{padding-bottom:80px!important}
+.exp-item{margin-bottom:36px!important}
