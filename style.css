@@ -182,9 +182,9 @@ body.board-page{background-color:var(--board,#c9a97c);color:var(--ink2,#4a3620);
 .id-meta dd{color:var(--ink2,#4a3620);margin:0}
 .id-bio{font-size:13.5px;line-height:2;color:#5a4632;margin:0;border-top:1px dashed #cbb98f;padding-top:16px}
 .about-notes{display:flex;flex-wrap:wrap;gap:14px;position:relative}
-.note{background:#fff3a3;padding:9px 14px;border-radius:2px;box-shadow:0 4px 9px rgba(56,34,14,.2);font:700 13px/1.5 楷体,KaiTi,STKaiti;color:#5a4632;rotate:var(--nr,0deg)}
-.note small{color:#8a7052;font-size:10px;letter-spacing:.1em}
-.s1{--nr:-2deg;background:#fff3a3}.s2{--nr:1.8deg;background:#ffd6e0}.s3{--nr:-1.6deg;background:#cdeaff}.s4{--nr:2.2deg;background:#d3f0cf}.s5{--nr:-2.3deg;background:#e6d9ff}
+.note{background:#fff3a3;padding:14px 20px;border-radius:2px;box-shadow:0 4px 9px rgba(56,34,14,.2);font:700 15px/1.5 楷体,KaiTi,STKaiti;color:#5a4632;rotate:var(--nr,0deg)}
+.note small{color:#8a7052;font-size:11px;letter-spacing:.08em}
+.s1{--nr:-2deg;background:#fff3a3}.s2{--nr:1.8deg;background:#ffd6e0}.s3{--nr:-1.6deg;background:#cdeaff}.s4{--nr:2.2deg;background:#d3f0cf}.s5{--nr:-2.3deg;background:#e6d9ff}.s6{--nr:1.5deg;background:#ffe4c4}.s7{--nr:-2deg;background:#e0f0d8}.s8{--nr:2deg;background:#ffd9e6}
 .n1{--nr:3deg;background:#fff3a3;padding:14px 18px;align-self:start}
 .n2{--nr:-3deg;background:#ffd6e0;padding:14px 18px;align-self:end}
 .business-card{width:min(100%,260px);background:#23352d;color:#f3ead6;border-radius:6px;padding:24px 22px;box-shadow:0 10px 20px rgba(56,34,14,.3);rotate:1.5deg;position:relative;overflow:hidden}
@@ -515,6 +515,9 @@ body.paper-cursor a,body.paper-cursor .clickable,body.paper-cursor button,body.p
 .about-notes .note.s3{left:64%;top:4%}
 .about-notes .note.s4{left:10%;top:15%}
 .about-notes .note.s5{left:58%;top:15%}
+.about-notes .note.s6{left:30%;top:30%}
+.about-notes .note.s7{left:66%;top:32%}
+.about-notes .note.s8{left:6%;top:44%}
 .about-notes .note.n1{left:44%;top:28%;width:120px}
 .about-notes .business-card{left:46%;top:46%}
 .about-notes .note.n2{left:4%;top:48%;max-width:170px}
