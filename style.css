@@ -384,6 +384,8 @@ body.paper-cursor a,body.paper-cursor .clickable,body.paper-cursor button,body.p
 .exp-card::before{content:"";position:absolute;top:-8px;left:50%;margin-left:-5px;width:10px;height:10px;border-radius:50%;background:#efe9da;border:1.5px solid var(--board,#c9a97c);box-shadow:inset 0 0 0 2px #fdfaf0}
 .exp-card h3{margin:0 0 6px;font:700 16px/1.4 楷体,KaiTi,STKaiti;color:var(--ink,#3a2c1a);letter-spacing:.05em}
 .exp-card p{margin:0;font:12px/1.9 楷体,KaiTi,STKaiti;color:var(--ink3,#6b5638)}
+
+.exp-tag.c1{background:#e8422f}.exp-tag.c2{background:#f08a3c}.exp-tag.c3{background:#8b5a2b}.exp-tag.c4{background:#e8789c}.exp-tag.c5{background:#9b7ede}.exp-tag.c6{background:#4cb8a0}.exp-tag.c7{background:#5a9fd8}.exp-tag.c8{background:#58a15c}.exp-tag.c9{background:#c9a227}.exp-tag.c10{background:#d6487e}.exp-tag.c11{background:#3a6ea5}.exp-tag.c12{background:#7a7a7a}
 .exp-card .exp-tag{display:inline-block;font:700 9px/1.5 'Courier New',monospace;color:#fff;background:#58a15c;padding:2px 8px;border-radius:999px;letter-spacing:.08em;margin-bottom:7px}
 .exp-item:nth-child(odd) .exp-card{rotate:-.6deg}
 .exp-item:nth-child(even) .exp-card{rotate:.7deg}
